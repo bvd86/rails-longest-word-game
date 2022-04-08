@@ -1,0 +1,12 @@
+<h1>Your Score</h1>
+
+
+<%   if @valid %>
+ <p>Sorry but <strong><%= @word %></strong> doesn't seems to be a valid English word</p>
+<% elsif @include %>
+  <p>Sorry but <strong><%= @word %></strong> cant be build using <strong><%= @letters %></strong></p>
+<% else %>
+  <p><strong>CONGRATULATION! <%= @word %></strong> is a valid English word!</p>
+<% end %>
+
+<%= link_to "Play Again", new_path %>
